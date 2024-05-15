@@ -7,18 +7,18 @@ body{
     background-repeat: no-repeat;
     text-align:center;
     font-family: "Playfair Display";
-    font-size: 5.5rem;
+    font-size: 2.5rem;
     margin-top: 100px;
     margin-bottom: 100px;
     
 }
 
 .heading{
-    font-size: 5.0rem;
+    font-size: 2.5rem;
 }
 
 .subheading{
-    font-size: 4.9rem;
+    font-size: 2.5rem;
     margin-top: 100px;
     margin-bottom: 100px;
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Brush+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
@@ -28,7 +28,7 @@ body{
 }
 
 p{
-    font-size: 4.9rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Brush+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
     text-align:center;
