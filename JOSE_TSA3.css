@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Brush+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+body{
+    background-image: url(bg3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align:center;
+    font-family: "Playfair Display";
+    font-size: 5.5rem;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.heading{
+    font-size: 5.0rem;
+}
+
+.subheading{
+    font-size: 4.9rem;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Brush+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    text-align:center;
+    font-family: "Bebas Neue", sans-serif;
+    color: 
+}
+
+p{
+    font-size: 4.9rem;
+    margin-bottom: 20px;
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Brush+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    text-align:center;
+    font-family: "Nanum Brush Script", cursive;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+
+.taylor{
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.Available{
+    font-weight: bold;
+    color: whitesmoke;
+}
