@@ -31,6 +31,8 @@ body{
     box-shadow: 10px 10px 10px black;
 }
 
+
+
 .image{
     background-image: url(bg1pokemon.png);
     background-size: cover;
@@ -42,8 +44,8 @@ body{
 
 @media(max-width: 1166px) {
     .card {
-        display: inline-block;
-        width: 100%;
+        display: block;
+        width: 40%;
         margin: 1rem;
     }
 }
@@ -78,7 +80,7 @@ h1{
 
 .type, .type1, .type2{
     display: inline-block;
-    padding: 0.5rem 1.2re,;
+    padding: 0.5rem 1.2rem;
     border-radius: 0.5rem;
     margin: 0.5rem 0.5rem;
     color: white;
@@ -117,6 +119,7 @@ button{
     margin: 0.2rem 0.5rem;
     color: white;
     transition: 0.5s ease;
+    margin-bottom: 1rem;
 }
 
 button:hover{
@@ -133,7 +136,7 @@ button:hover{
 
 .card:hover{
     background-color: white;
-}
+} 
 
 .details{
     padding: 0.8rem 0;
@@ -142,27 +145,56 @@ button:hover{
     border-top-left-radius: 0;
 }
 
-.details.pink {
-    background-color: pink;
+.pink{
+    background-color: #708090;
 }
 
-.details.lightyellow {
+.lightyellow{
     background-color: #DAA520;
 }
 
-.details.lightblue {
+.lightblue{
     background-color: lightblue;
 }
 
-.details.pinkpurple {
-    background-color: #E03FD8;
+.pinkpurple{
+    background-color: #EE82EE;
 }
 
-.details.lightgreen {
-    background-color: lightgreen;
+.lightgreen{
+    background-color: #6B8E23;
 }
 
-.details.lightpurple {
+.lightpurple{
     background-color: #CBC3E3;
 }
+
+.normal{ 
+    background-color: gray; 
+}
+
+.fire{
+    background-color: #B22222; 
+}
+
+.electric{ 
+    background-color: #F7D02C; 
+}
+
+.water{ 
+    background-color: #6390F0; 
+}
+
+.grass{ 
+    background-color: #008000; 
+}
+
+.ground{ 
+    background-color: #A0522D; 
+}
+
+
+
+
+
 
