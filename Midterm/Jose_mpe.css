@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: ease;
+}
+
+body{
+    background-color: black;
+}
+
+.container{
+    background-image: url(forestng2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: 90vw;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row ;
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.box{
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+img{
+    width: 100%;
+}
+
+p{
+    display: none;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
+#pball{
+    display: none;
+    width: 80px;
+    height: 80px;
+}
+
+#box1{
+    background-color: lightyellow;
+}
+
+#box2{
+    background-color: darkolivegreen ;
+}
+
+#box3{
+    background-color: salmon;
+}
+
+#box4{
+    background-color: powderblue;
+}
+
+#box5{
+    background-color: peachpuff;
+}
+
+#box6{
+background-color: lightpink;
+}
+
+#box7{
+    background-color: bisque;
+}
+
+#box8{
+    background-color: burlywood;
+}
+
+#box9{
+    background-color: khaki;
+}
+
+#box10{
+    background-color: goldenrod;
+}
+
+#box11{
+    background-color: lightskyblue;
+}
+
+#box12{
+    background-color: lightblue;
+}
