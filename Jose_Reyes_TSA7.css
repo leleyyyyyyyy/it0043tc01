@@ -6,16 +6,22 @@
 }
 
 body {
-    border: 2px solid black;
+    background-image: url(koketbg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     padding: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    background-color: #f0ece3;
 }
 
 .grid-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 3fr);
     gap: 10px;
     width: 100%;
     max-width: 800px;
@@ -26,13 +32,22 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 10px;
-    border: 2px solid black;
+    border: 2px solid #c98787;
+    border-radius: 10px;
+    background-color: #f8d7da;
 }
 
 .values {
     text-align: center;
     padding: 5px;
     width: 100%;
+    background-color: #ffefef;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    color: black;
+    border-color: #a87677;
+    font-weight: 300;
+    text-shadow: 0 0.04em 0.4em rgba(0, 0, 0, 0.35);
+    box-sizing: border-box;
 }
 
 .item-box {
@@ -42,7 +57,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 3rem;
-    border: 2px solid steelblue;
+    border: 2px solid #a87677;
     color: black;
     font-weight: bold;
     border-radius: 10px;
@@ -61,13 +76,13 @@ body {
     background-color: #fffed4;
 }
 
-.bn60 {
+.btns {
     display: inline-block;
     padding: 0.5rem 1.7rem;
     margin: 0.01em 0.1em 0;
     border: 0.16em solid rgba(255, 255, 255, 0);
-    background-color: #bceaff; 
-    border-radius: 2em;
+    background-color: #e0adac;
+    border-radius: 1rem;
     box-sizing: border-box;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -75,17 +90,21 @@ body {
     color: black;
     text-shadow: 0 0.04em 0.4em rgba(0, 0, 0, 0.35);
     text-align: center;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.bn60:hover {
-    border-color: rgb(255, 255, 255);
+.btns:hover {
+    border-color: #ffefef;
     cursor: pointer;
+    transform: scale(1.07);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-:focus {
-    color: #212529;
-    background-color: #fff;
-    border-color: 86b7fe;
+.btns:focus {
+    color: #a87677;
+    background-color: #ffefef;
+    border-color: #e0adac;
     outline: 0;
     box-shadow: 0 0 0 0 0.25rem rgb(13 110 253 / 25%);
 }
@@ -93,7 +112,34 @@ body {
 .flex-wrapper {
     display: flex;
     gap: 10px;
-    border: 2px solid black;
+    border: 2px solid #c98787;
     padding: 10px;
     border-radius: 10px;
+    justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+    .grid-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .flex-wrapper {
+        justify-content: center;
+    }
+
+    .control-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .btns, .values {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .item-box {
+        width: 100%;
+        height: auto;
+        font-size: 2rem;
+    }
 }
