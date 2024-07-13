@@ -1,0 +1,752 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #edf1d6;
+}
+
+header {
+    background: beige;
+    padding: 10px 20px;
+}
+
+.container {
+    max-width: 2200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.Navigation {
+    position: fixed; /* Add this line to fix the navigation */
+    top: 0; /* Optional: Adjust as needed */
+    left: 0; /* Optional: Adjust as needed */
+    width: 100%; /* Optional: Adjust as needed */
+    background-color: beige; /* Optional: Adjust as needed */
+    z-index: 1000; /* Optional: Adjust as needed */
+}
+
+.Navigation .container {
+    margin: 0 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Navigation .Logo {
+    font-size: 3rem;
+    font-family: 'Sacramento', cursive;
+    color:#195319;
+}
+
+.Navigation .Logo:hover {
+    color: #80af81; /* Change to your desired hover color */
+    text-shadow: 2px 2px 4px #195319(0, 0, 0, 0.3);
+}
+
+/* Navigation Styles */
+.Navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Ensure items are evenly spaced */
+}
+
+.Navigation ul li {
+    list-style: none;
+    transition: 0.5s;
+}
+
+.Navigation ul li a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    padding: 6px;
+    font-size: 25px;
+    font-family: "Gamja Flower", sans-serif;
+    color: green;
+    transition: 0.5s;
+    border: none; 
+    background: none;
+}
+
+.Navigation ul:hover li a {
+    transform: scale(1.3);
+    opacity: 0.3;
+}
+
+.Navigation ul li a:hover {
+    transform: scale(1.2);
+    opacity: 1;
+    filter: blur(0);
+    text-decoration: none;
+    color: #195319;
+}
+
+.Navigation ul li a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10%;
+    width: 100%;
+    height: 100%;
+    background:#afd097;
+    transition: 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+    z-index: -1;
+}
+
+.Navigation ul li a:hover:before {
+    transition: transform 0.5s;
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(Homebg.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column; /* Added to arrange content vertically */
+}
+
+.hero h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fcffe0;
+    font-family: "Shantell Sans", cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px; /* Added to create space between text and button */
+}
+
+.learnmore {
+    --c: #4e6f52;
+    color: var(--c);
+    font-size: 17px;
+    border: 0.4em solid var(--c);
+    border-radius: 0.5em;
+    width: 11em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Gamja Flower", sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em auto; /* Center align in parent container */
+    background-color: #d3e3c7; /* To match body background */
+    text-decoration: none; /* Remove underline */
+}
+
+.learnmore span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.learnmore:hover {
+    color: #d3e3c7;
+}
+
+.learnmore:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.learnmore span:nth-child(1) {
+    --n: 1;
+}
+
+.learnmore span:nth-child(2) {
+    --n: 2;
+}
+
+.learnmore span:nth-child(3) {
+    --n: 3;
+}
+
+.learnmore span:nth-child(4) {
+    --n: 4;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    text-align: left; 
+    gap: 35px; 
+    margin-left: 10%;
+
+}
+
+.about-content img {
+    max-width: 350px;
+    border: 10px solid #bace93;
+    border-radius: 2%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    transition: transform 0.7s ease, box-shadow 0.9s ease; 
+}
+
+.about-content img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text h2 {
+    color: #294b29;
+    font-size: 60px;
+    font-family: "Gamja Flower", sans-serif;
+}
+
+.about-text h3 {
+    color: #294b29;
+    font-size: 30px;
+    margin-top: 1px;
+    font-family: "Gamja Flower", sans-serif;
+}
+
+.about-text p {
+    color: #294b29;
+    font-size: 27px;
+    font-family: "Gamja Flower", sans-serif;
+    margin: 0;
+    margin-right: 10%;
+}
+
+/* Blog Section Styles */
+#blog {
+    background-color: #bace93;
+    padding: 50px 0; /* Adjust padding as needed */
+    text-align: center; /* Center-align text */
+}
+
+#blog h1 {
+    color: #294b29; /* Match heading color */
+    padding-top: 2%;
+    font-size: 60px; /* Adjust font size */
+    font-family: "Gamja Flower", sans-serif; /* Match font family */
+}
+
+#blog h2 {
+    color: #294b29; /* Match subheading color */
+    font-size: 30px; /* Adjust font size */
+    font-family: "Gamja Flower", sans-serif; /* Match font family */
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#instagram-post {
+    background-color: #bace93;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1%;
+    padding: 10%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    justify-content: center; /* Center the grid items */
+}
+
+#instagram-post .post {
+    color: #294b29;
+    border: 10px solid #e7f0dd;
+    border-radius: 10px;
+    max-width: 450px;
+    background-color: #e7f0dd;
+    font-family: Arial, sans-serif;
+    transition: transform 0.7s ease, box-shadow 0.9s ease;
+}
+
+#instagram-post .post-header {
+    color: #294b29;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+#instagram-post .profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#instagram-post .post-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#instagram-post .username {
+    color: #294b29;
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+#instagram-post .time {
+    font-size: 10px;
+    color: #294b29;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#instagram-post .post-image {
+    width: 100%;
+}
+
+#instagram-post .post-actions {
+    justify-content: space-between;
+    padding: 5px;
+}
+
+#instagram-post .post-actions i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#instagram-post .post-likes {
+    color: #294b29;
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 10px;
+}
+
+#instagram-post .post-caption {
+    padding: 10px;
+}
+
+#instagram-post .post:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-item {
+    font-family: "Gamja Flower", sans-serif;
+    margin: 1rem;
+    padding: 2rem;
+    margin-bottom: 5%;
+    max-width: 350px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.7s ease, box-shadow 0.7s ease;
+    flex: 1 1 calc(33.3333% - 2rem); /* 3 items per row */
+    min-width: 250px; /* Minimum width to ensure smaller screens display properly */
+    background-color: #dbe2b6; /* Add your desired background color here */
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-items h1 {
+    text-transform: capitalize;
+    font-size: 4rem;
+    color: #195319;
+    font-family: "Gamja Flower", sans-serif;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.portfolio-item h3 {
+    color: #2b3a37;
+    font-size: 2rem;
+    font-family: "Gamja Flower", sans-serif;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.portfolio-item p {
+    font-family: "Gamja Flower", sans-serif;
+    font-size: 2rem;
+    color: #2b3a37;
+}
+
+.portfolio-item a {
+    font-family: "Gamja Flower", sans-serif;
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 25px;
+    color: #dfe8cd;
+    background: #42684f;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.portfolio-item a:hover {
+    background: #adbc9f;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
+    margin: 0%;
+    padding-bottom: 5%;
+}
+
+.pagination li {
+    list-style: none;
+    margin: 0.9rem;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #5f6f52;
+    padding: 0.7rem 1.5rem;
+    border: 1px solid #2b3a37;;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+.pagination a:hover {
+    background-color: #d3e3c7;
+    color: #4e6f52;
+}
+
+.pagination .active {
+    background-color: #4e6f52;
+    color: #d3e3c7;
+}
+
+/* Contact section styles */
+.contact {
+    padding: 140px 0 10px; /* Adjust bottom padding */
+    background-color: #bace93;
+    color: #15301f;
+}
+
+.contact h3 {
+    text-transform: uppercase;
+    font-size: 30px;
+    padding-top: 0%;
+    margin-top: 0%; /* Reduce top margin */
+    margin-bottom: 5px; /* Reduce bottom margin */
+    text-align: center;
+    font-family: "Gamja Flower", sans-serif;
+}
+
+.contact .container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact form label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #15301f;
+    background-color: beige;
+    color: #15301f;
+}
+
+.contact form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact form button {
+    font-family: "Gamja Flower", sans-serif;
+    text-transform: uppercase;
+    align-self: center; /* Center the button */
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #15301f;
+    color: beige;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact form button:hover {
+    background-color:#42684f;
+}
+
+/* Add some styling for better layout */
+.contact .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.contact .contact-info p {
+    margin: 0;
+    font-size: 20px;
+    color: #15301f;
+}
+
+.contact .contact-info a {
+    color: #15301f; /* Bright green for links */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.contact .contact-info a:hover {
+    text-decoration: underline; /* Underline on hover for better visibility */
+}
+
+footer {
+    background: #2b3a37;
+    color:beige;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer .social-links a {
+    color: beige;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+footer .social-links a:hover {
+    color: #a0c398;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    height: 40%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 8%;
+    right: 0px;
+    background-color: beige;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color:  #15301f;
+    display: block;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+}
+
+.sidebar a:hover {
+    color: #bace93;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 1px;
+    font-size: 36px;
+}
+
+.open-btn {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color:  #15301f;
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .portfolio-item {
+        flex: 1 1 calc(50% - 2rem);
+    }
+    .hero {
+        background-size: cover;
+    }
+    #instagram-post {
+        padding: 5%;
+        gap: 2%;
+    }
+
+    #instagram-post .post {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Navigation ul {
+        display: none;
+    }
+
+    .open-btn {
+        display: block;
+    }
+
+    .hero {
+        background-size: cover;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .portfolio-item {
+        flex: 1 1 calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 960px) {
+    .open-btn {
+        top: 15px;
+        left: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content img {
+        max-width: 60%;
+        margin: 1;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .portfolio-item {
+        flex: 1 1 calc(100% - 2rem);
+    }
+    #instagram-post {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 5%;
+    }
+
+    #instagram-post .post {
+        margin-bottom: 15px;
+    }
+    .hero {
+        background-size: cover;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .learnmore {
+        font-size: 14px;
+        width: 8em;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+    }
+    #instagram-post {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        padding: 5%;
+        gap: 5%;
+    }
+
+    #instagram-post .post {
+        margin-bottom: 10px;
+    }
+    .hero {
+        background-size: cover;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .open-btn {
+        display: block;
+    }
+
+    .Navigation ul {
+        display: none; /* Hide the navigation menu on smaller screens */
+    }
+
+    .sidebar a {
+        font-size: 20x; /* Adjust the font size for the sidebar links */
+    }
+
+    .sidebar .closebtn {
+        font-size: 30px; /* Adjust the font size for the close button */
+    }
+    .hero {
+        background-size: cover;
+    }
+}
